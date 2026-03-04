@@ -1,0 +1,29 @@
+.hero {
+     background: url('wp9212556.jpg') center/cover no-repeat;
+    min-height: 80vh;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.badge-custom {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.hero2 {
+    margin: 20px;
+}
