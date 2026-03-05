@@ -1,6 +1,6 @@
 .hero {
      background: url('wp9212556.jpg') center/cover no-repeat;
-    min-height: 80vh;
+    min-height: 70vh;
     position: relative;
     color: white;
 }
@@ -26,4 +26,11 @@
 
 .hero2 {
     margin: 20px;
+}
+.content-info1{
+    background: linear-gradient(40deg,#020202, #000000);
+    color:white;
+}
+.content-info1 .content-info .content-row .info {
+    color:white;
 }

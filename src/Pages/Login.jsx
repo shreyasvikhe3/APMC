@@ -100,7 +100,7 @@ export const Login = ({ users }) => {
   return (
     <Container className="d-flex justify-content-center align-items-center vh-100">
       <Card className="p-4 shadow" style={{ width: "350px" }}>
-        <h4 className="text-center">Login</h4>
+        <h4 className="text-center">लॉगिन</h4>
           <Form.Control
             type="email"
             placeholder="Enter Email"

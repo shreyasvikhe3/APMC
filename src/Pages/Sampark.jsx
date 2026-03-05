@@ -32,7 +32,7 @@ export const Sampark = ({ addUser }) => {
     });
   };
   return (
-    <Container className="mt-4">
+    <Container className="mt-6" style={{ marginTop: '50px',marginBottom: '50px' }}>
       <Card className="p-4 shadow">
         <h4>Registration Form</h4>
         <Form onSubmit={handleSubmit}>
@@ -54,7 +54,7 @@ export const Sampark = ({ addUser }) => {
             value={formData.email}
             onChange={handleChange}
           />
-
+{/* 
           <Form.Control
             className="mb-2"
             type="text"
@@ -62,7 +62,7 @@ export const Sampark = ({ addUser }) => {
             name="rollno"
             value={formData.rollno}
             onChange={handleChange}
-          />
+          /> */}
 
           <Form.Control
             className="mb-2"
