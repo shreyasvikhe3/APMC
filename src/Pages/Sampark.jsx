@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import '../CSS/Sampark.css'
 
 
 export const Sampark = ({ addUser }) => {
@@ -32,8 +33,10 @@ export const Sampark = ({ addUser }) => {
     });
   };
   return (
-    <Container className="mt-6" style={{ marginTop: '50px',marginBottom: '50px' }}>
-      <Card className="p-4 shadow">
+    <>
+    <div className="content">
+    <Container className="mt-6 d-flex justify-content-center align-items-center vh-100" style={{ marginTop: '50px',marginBottom: '50px' }}>
+      <Card className="p-4 shadow bg-dark text-white">
         <h4>Registration Form</h4>
         <Form onSubmit={handleSubmit}>
 
@@ -78,5 +81,7 @@ export const Sampark = ({ addUser }) => {
         </Form>
       </Card>
     </Container>
+    </div>
+    </>
   )
 }
