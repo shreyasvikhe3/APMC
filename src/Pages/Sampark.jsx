@@ -31,19 +31,20 @@ export const Sampark = ({ addUser }) => {
       password: "",
       rollno: ""
     });
+    alert("Registration Successful ✅");
   };
   return (
     <>
     <div className="content">
     <Container className="mt-6 d-flex justify-content-center align-items-center vh-100" style={{ marginTop: '50px',marginBottom: '50px' }}>
       <Card className="p-4 shadow bg-dark text-white">
-        <h4>Registration Form</h4>
+        <h4>नोंदणी अर्ज</h4>
         <Form onSubmit={handleSubmit}>
 
           <Form.Control
             className="mb-2"
             type="text"
-            placeholder="Name"
+            placeholder="नाव"
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -52,7 +53,7 @@ export const Sampark = ({ addUser }) => {
           <Form.Control
             className="mb-2"
             type="email"
-            placeholder="Email"
+            placeholder="ईमेल"
             name="email"
             value={formData.email}
             onChange={handleChange}
@@ -70,13 +71,13 @@ export const Sampark = ({ addUser }) => {
           <Form.Control
             className="mb-2"
             type="password"
-            placeholder="Password"
+            placeholder="पासवर्ड"
             name="password"
             value={formData.password}
             onChange={handleChange}
           />
 
-          <Button type="submit">Register</Button>
+          <Button type="submit">नोंदणी करा</Button>
 
         </Form>
       </Card>

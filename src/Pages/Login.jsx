@@ -103,7 +103,7 @@ export const Login = ({ users }) => {
         <h4 className="text-center">लॉगिन</h4>
           <Form.Control
             type="email"
-            placeholder="Enter Email"
+            placeholder="ईमेल"
             className="mb-3"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -112,7 +112,7 @@ export const Login = ({ users }) => {
                   <Form onSubmit={handleLogin}>
           <Form.Control
             type="password"
-            placeholder="Enter Password"
+            placeholder="पासवर्ड"
             className="mb-3"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -120,7 +120,7 @@ export const Login = ({ users }) => {
           />
 
           <Button type="submit" className="w-100">
-            Login
+            लॉगिन
           </Button>
         </Form>
       </Card>

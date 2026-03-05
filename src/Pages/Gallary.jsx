@@ -5,7 +5,7 @@ export const Gallary =  ({ users, deleteUser }) => {
 
   return (
     <Container className="mt-4 bg-dark text-white p-4 min-vh-100" style={{marginTop:"50px",marginBottom:"50px"}}>
-      <h4>User List</h4>
+      <h4>वापरकर्त्यांची यादी</h4>
 
       <Table striped bordered hover >
         <thead>
@@ -14,7 +14,7 @@ export const Gallary =  ({ users, deleteUser }) => {
             <th>ईमेल</th>
             <th>पासवर्ड</th>
             {/* <th>Roll No</th> */}
-            <th>Action</th>
+            <th>कृती</th>
           </tr>
         </thead>
 
