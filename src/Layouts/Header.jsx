@@ -43,6 +43,7 @@ export const Header = () => {
             <NavDropdown.Item as={Link} to="/Samudra">समुद्रमार्गे अनुदान</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/Mhbs">सेवानिवृत्ती वेतन योजना</NavDropdown.Item>
           </NavDropdown>
+          <Nav.Link as={Link} to="/Nondani">नोंदणी</Nav.Link>
 
           <Nav.Link as={Link} to="/Sampark">संपर्क</Nav.Link>
           <Nav.Link as={Link} to="/Gallary">गॅलरी</Nav.Link>

@@ -16,6 +16,7 @@ import { ShetmalTaran } from './Pages/ShetmalTaran';
 import { KrushiPanan } from './Pages/KrushiPanan';
 import { Samudra } from './Pages/Samudra';
 import { Mhbs } from './Pages/Mhbs';
+import { Nondani } from './Pages/Nondani';
 import {Sampark} from './Pages/Sampark';
 import { Gallary } from './Pages/Gallary';
 import { Login } from './Pages/Login';
@@ -77,7 +78,8 @@ function App() {
       <Route path="/KrushiPanan" element={<KrushiPanan />} />
       <Route path="/Samudra" element={<Samudra />} />
       <Route path="/Mhbs" element={<Mhbs />} />
-      <Route path="/Sampark" element={<Sampark addUser={addUser} />} />
+      <Route path="/Nondani" element={<Nondani addUser={addUser} />} />
+      <Route path="/Sampark" element={<Sampark />} />
       <Route path="/Gallary" element={<Gallary users={users} deleteUser={deleteUser} />} />
       <Route path="/Login" element={<Login users={users} />} />
       <Route path="/Sign" element={<Sign />} />

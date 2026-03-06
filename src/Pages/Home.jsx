@@ -18,10 +18,10 @@ export const Home = () => {
           </h1>
 
           <div className="d-flex justify-content-center gap-3 flex-wrap" style={{ marginTop: "30px" }}>
-            <Link to="/Login" className="btn btn-dark btn-lg">
+            <Link to="/Login" className="btn btn-dark btn-lg" style={{ backgroundColor: "#626a20", borderColor: "#626a20" }}>
               लॉगिन करा
             </Link>
-            <Link to="/Sampark" className="btn btn-light btn-lg">
+            <Link to="/Sampark" className="btn btn-light btn-lg" style={{ backgroundColor: "#030303",color:"white" }}>
               साइन इन करा
             </Link>
           </div>

@@ -1,88 +1,76 @@
+import React from "react";
+import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
-import '../CSS/Sampark.css'
-
-
-export const Sampark = ({ addUser }) => {
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    rollno: ""
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addUser(formData);
-
-    setFormData({
-      name: "",
-      email: "",
-      password: "",
-      rollno: ""
-    });
-    alert("Registration Successful ✅");
-  };
+export const Sampark = () => {
   return (
-    <>
-    <div className="content">
-    <Container className="mt-6 d-flex justify-content-center align-items-center vh-100" style={{ marginTop: '50px',marginBottom: '50px' }}>
-      <Card className="p-4 shadow bg-dark text-white">
-        <h4>नोंदणी अर्ज</h4>
-        <Form onSubmit={handleSubmit}>
+    <Container className="my-5">
+      <Row className="g-4">
 
-          <Form.Control
-            className="mb-2"
-            type="text"
-            placeholder="नाव"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+        {/* Contact Form */}
+        <Col md={6} sm={12}>
+          <Card className="shadow">
+            <Card.Body>
+              <Card.Title className="mb-4 text-center">
+                संपर्क फॉर्म
+              </Card.Title>
 
-          <Form.Control
-            className="mb-2"
-            type="email"
-            placeholder="ईमेल"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-{/* 
-          <Form.Control
-            className="mb-2"
-            type="text"
-            placeholder="Roll No"
-            name="rollno"
-            value={formData.rollno}
-            onChange={handleChange}
-          /> */}
+              <Form>
+                <Form.Group className="mb-3">
+                  <Form.Label>नाव</Form.Label>
+                  <Form.Control type="text" placeholder="आपले नाव टाका" />
+                </Form.Group>
 
-          <Form.Control
-            className="mb-2"
-            type="password"
-            placeholder="पासवर्ड"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
+                <Form.Group className="mb-3">
+                  <Form.Label>ईमेल</Form.Label>
+                  <Form.Control type="email" placeholder="आपला ईमेल टाका" />
+                </Form.Group>
 
-          <Button type="submit">नोंदणी करा</Button>
+                <Form.Group className="mb-3">
+                  <Form.Label>मोबाईल नंबर</Form.Label>
+                  <Form.Control type="text" placeholder="मोबाईल नंबर" />
+                </Form.Group>
 
-        </Form>
-      </Card>
+                <Form.Group className="mb-3">
+                  <Form.Label>संदेश</Form.Label>
+                  <Form.Control as="textarea" rows={3} placeholder="आपला संदेश लिहा" />
+                </Form.Group>
+
+                <Button variant="success" type="submit" className="w-100">
+                  पाठवा
+                </Button>
+              </Form>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        {/* Address Card */}
+        <Col md={6} sm={12}>
+          <Card className="shadow">
+            <Card.Body>
+              <Card.Title className="mb-4 text-center">
+                APMC पत्ता
+              </Card.Title>
+
+              <p><strong>संस्था नाव:</strong> कृषी उत्पन्न बाजार समिती</p>
+              <p><strong>ठिकाण:</strong> नांदगाव, नाशिक</p>
+              <p><strong>पिन कोड:</strong> 423106</p>
+              <p><strong>फोन:</strong> 02552-XXXXXX</p>
+              <p><strong>ईमेल:</strong> apmcnandgaon@gmail.com</p>
+
+              <hr />
+
+              <p>
+                <strong>पत्ता:</strong><br/>
+                कृषी उत्पन्न बाजार समिती,<br/>
+                नांदगाव, जिल्हा नाशिक,<br/>
+                महाराष्ट्र, भारत
+              </p>
+
+            </Card.Body>
+          </Card>
+        </Col>
+
+      </Row>
     </Container>
-    </div>
-    </>
-  )
-}
+  );
+};
