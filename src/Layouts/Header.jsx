@@ -21,11 +21,11 @@ export const Header = () => {
     <img src={image} alt="Right Logo" className="header-logo" />
   </div>
 
-  <Navbar expand="lg" className="custom-navbar" sticky="top">
+  <Navbar expand="lg" className="custom-navbar " sticky="top">
     <Container>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-light"/>
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto nav-items">
+        <Nav className="ms-auto nav-items gap-3 ">
           <Nav.Link as={Link} to="/">होम</Nav.Link>
 
           <NavDropdown title="संस्था" id="basic-nav-dropdown">

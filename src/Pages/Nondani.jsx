@@ -1,87 +1,110 @@
 
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import React from "react";
+import { useState } from "react";
+import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import signupImg from "../Images/UI/Screenshot 2026-03-06 104100.png"; // add your image
+import '../CSS/Nondani.css'
 
 
 export const Nondani = ({ addUser }) => {
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    rollno: ""
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        password: "",
+        rollno: ""
     });
-  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addUser(formData);
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
 
-    setFormData({
-      name: "",
-      email: "",
-      password: "",
-      rollno: ""
-    });
-    alert("Registration Successful ✅");
-  };
-  return (
-    <>
-    <div className="content">
-    <Container className="mt-6 d-flex justify-content-center align-items-center vh-100" style={{ marginTop: '50px',marginBottom: '50px' }}>
-      <Card className="p-4 shadow bg-dark text-white">
-        <h4>नोंदणी अर्ज</h4>
-        <Form onSubmit={handleSubmit}>
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addUser(formData);
 
-          <Form.Control
-            className="mb-2"
-            type="text"
-            placeholder="नाव"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+        setFormData({
+            name: "",
+            email: "",
+            password: "",
+            rollno: ""
+        });
+        alert("Registration Successful ✅");
+    };
+    return (
+        <>
+            <div className="main-bg">
+                <Container className="">
+                    <Row className="align-items-center">
 
-          <Form.Control
-            className="mb-2"
-            type="email"
-            placeholder="ईमेल"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-{/* 
-          <Form.Control
-            className="mb-2"
-            type="text"
-            placeholder="Roll No"
-            name="rollno"
-            value={formData.rollno}
-            onChange={handleChange}
-          /> */}
+                        {/* Image Section */}
+                        <Col md={6} className="mb-4">
+                            <img
+                                src={signupImg}
+                                alt="Signup"
+                                className="img-fluid rounded shadow"
+                            />
+                        </Col>
 
-          <Form.Control
-            className="mb-2"
-            type="password"
-            placeholder="पासवर्ड"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
+                        {/* Signup Form */}
+                        <Col md={6} className="mb-4">
+                            <Card className="shadow p-4 my-5">
+                                <Card.Body>
 
-          <Button type="submit">नोंदणी करा</Button>
+                                    <h3 className="text-center mb-4">नोंदणी करा</h3>
 
-        </Form>
-      </Card>
-    </Container>
-    </div>
-    </>
-  )
+                                    <Form onSubmit={handleSubmit}>
+
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>नाव</Form.Label>
+                                            <Form.Control type="text" placeholder="आपले नाव" value={formData.name}
+                                                onChange={handleChange} />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>ईमेल</Form.Label>
+                                            <Form.Control type="email" placeholder="आपला ईमेल" value={formData.email}
+                                                onChange={handleChange} />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>मोबाईल नंबर</Form.Label>
+                                            <Form.Control type="text" placeholder="मोबाईल नंबर" />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>पासवर्ड</Form.Label>
+                                            <Form.Control type="password" placeholder="पासवर्ड" value={formData.password}
+                                                onChange={handleChange} />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>पासवर्ड पुन्हा टाका</Form.Label>
+                                            <Form.Control type="password" placeholder="Confirm Password" />
+                                        </Form.Group>
+
+                                        <Button variant="success" className="w-100">
+                                            साइन अप
+                                        </Button>
+
+                                        <div className="text-center mt-3">
+                                            आधीच खाते आहे? <a href="/Login">लॉगिन करा</a>
+                                        </div>
+
+                                    </Form>
+
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
+                    </Row>
+                </Container>
+
+            </div>
+        </>
+    )
 }

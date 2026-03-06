@@ -1,14 +1,16 @@
 import React from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-
+import '../CSS/Sampark.css'
 export const Sampark = () => {
   return (
-    <Container className="my-5">
+    <div className="main-bg">
+   {/* Your website content */}
+    <Container className="my-4">
       <Row className="g-4">
 
         {/* Contact Form */}
         <Col md={6} sm={12}>
-          <Card className="shadow">
+          <Card className="shadow my-5">
             <Card.Body>
               <Card.Title className="mb-4 text-center">
                 संपर्क फॉर्म
@@ -45,7 +47,7 @@ export const Sampark = () => {
 
         {/* Address Card */}
         <Col md={6} sm={12}>
-          <Card className="shadow">
+          <Card className="shadow my-5">
             <Card.Body>
               <Card.Title className="mb-4 text-center">
                 APMC पत्ता
@@ -72,5 +74,6 @@ export const Sampark = () => {
 
       </Row>
     </Container>
+</div>
   );
 };

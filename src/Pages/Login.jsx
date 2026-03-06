@@ -16,7 +16,7 @@
 //       const formData=new FormData();
 //       formData.append('email',email);
 //       formData.append('password',password);
-      
+
 //       const config={
 //         headers:{
 //           'Content-Type':'multipart/form-data',
@@ -73,8 +73,10 @@
 //   )
 // }
 import React, { useState } from "react";
-import { Container, Form, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import loginImg from "../Images/UI/Screenshot 2026-03-06 104100.png"; // add your image
+import '../CSS/Login.css'
 
 export const Login = ({ users }) => {
 
@@ -98,32 +100,93 @@ export const Login = ({ users }) => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-100">
-      <Card className="p-4 shadow bg-dark text-white" style={{ width: "350px" }}>
-        <h4 className="text-center">लॉगिन</h4>
-          <Form.Control
-            type="email"
-            placeholder="ईमेल"
-            className="mb-3"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-                  <Form onSubmit={handleLogin}>
-          <Form.Control
-            type="password"
-            placeholder="पासवर्ड"
-            className="mb-3"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+    // <Container className="d-flex justify-content-center align-items-center vh-100">
+    //   <Card className="p-4 shadow bg-dark text-white" style={{ width: "350px" }}>
+    //     <h4 className="text-center">लॉगिन</h4>
+    //       <Form.Control
+    //         type="email"
+    //         placeholder="ईमेल"
+    //         className="mb-3"
+    //         value={email}
+    //         onChange={(e) => setEmail(e.target.value)}
+    //         required
+    //       />
+    //               <Form onSubmit={handleLogin}>
+    //       <Form.Control
+    //         type="password"
+    //         placeholder="पासवर्ड"
+    //         className="mb-3"
+    //         value={password}
+    //         onChange={(e) => setPassword(e.target.value)}
+    //         required
+    //       />
 
-          <Button type="submit" className="w-100">
-            लॉगिन
-          </Button>
-        </Form>
-      </Card>
+    //       <Button type="submit" className="w-100">
+    //         लॉगिन
+    //       </Button>
+    //     </Form>
+    //   </Card>
+    // </Container>
+    <div className="main-bg">
+    <Container className="">
+      <Row className="justify-content-center align-items-center">
+
+        {/* Image Section */}
+        <Col md={6} className="mb-4 my-5">
+          <img
+            src={loginImg}
+            alt="Login"
+            className="img-fluid rounded shadow"
+          />
+        </Col>
+
+        {/* Login Form */}
+        <Col md={6}>
+          <Card className="shadow p-4 my-4">
+            <Card.Body>
+
+              <h3 className="text-center mb-4">साइन इन</h3>
+
+              <Form>
+
+                <Form.Group className="mb-3">
+                  <Form.Label>ईमेल</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="आपला ईमेल टाका"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                  <Form.Label>पासवर्ड</Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="पासवर्ड टाका"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+
+                <Button variant="success" className="w-100">
+                  लॉगिन
+                </Button>
+
+                <div className="text-center mt-3">
+                  <a href="#">पासवर्ड विसरलात?</a>
+                </div>
+
+              </Form>
+
+            </Card.Body>
+          </Card>
+        </Col>
+
+      </Row>
     </Container>
+    </div>
   );
 };
