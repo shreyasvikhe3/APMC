@@ -61,13 +61,13 @@ export const Nondani = ({ addUser }) => {
 
                                         <Form.Group className="mb-3">
                                             <Form.Label>नाव</Form.Label>
-                                            <Form.Control type="text" placeholder="आपले नाव" value={formData.name}
+                                            <Form.Control type="text" name="name" placeholder="आपले नाव" value={formData.name}
                                                 onChange={handleChange} />
                                         </Form.Group>
 
                                         <Form.Group className="mb-3">
                                             <Form.Label>ईमेल</Form.Label>
-                                            <Form.Control type="email" placeholder="आपला ईमेल" value={formData.email}
+                                            <Form.Control type="email" name="email" placeholder="आपला ईमेल" value={formData.email}
                                                 onChange={handleChange} />
                                         </Form.Group>
 
@@ -78,16 +78,16 @@ export const Nondani = ({ addUser }) => {
 
                                         <Form.Group className="mb-3">
                                             <Form.Label>पासवर्ड</Form.Label>
-                                            <Form.Control type="password" placeholder="पासवर्ड" value={formData.password}
+                                            <Form.Control type="password" name="password" placeholder="पासवर्ड" value={formData.password}
                                                 onChange={handleChange} />
                                         </Form.Group>
 
                                         <Form.Group className="mb-3">
                                             <Form.Label>पासवर्ड पुन्हा टाका</Form.Label>
-                                            <Form.Control type="password" placeholder="Confirm Password" />
+                                            <Form.Control type="password" name="confirmPassword" placeholder="Confirm Password" />
                                         </Form.Group>
 
-                                        <Button variant="success" className="w-100">
+                                        <Button type="submit" variant="success" className="w-100">
                                             साइन अप
                                         </Button>
 
