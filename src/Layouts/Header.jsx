@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../Images/HOME/APMCLOGO.jpg';
+import logo from '../Images/UI/APMC.png';
 import image from '../Images/HOME/msamb-logo.png';
 import '../CSS/Header.css'
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -12,7 +12,7 @@ export const Header = () => {
     return (
         <>
   <div className="top-header d-flex justify-content-between align-items-center px-4 py-2">
-    <img src={logo} alt="Logo" className="header-logo" />
+    <img src={logo} alt="Logo" className="header-logo image-fluid rounded"/>
     
     <h1 className="header-title text-center">
       कृषी उत्पन्न बाजार समिती, नांदगाव, नाशिक

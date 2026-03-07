@@ -12,7 +12,7 @@ export const Sampark = () => {
         <Col md={6} sm={12}>
           <Card className="shadow my-5">
             <Card.Body>
-              <Card.Title className="mb-4 text-center">
+              <Card.Title className="mb-4 text-center fw-bold">
                 संपर्क फॉर्म
               </Card.Title>
 
@@ -49,7 +49,7 @@ export const Sampark = () => {
         <Col md={6} sm={12}>
           <Card className="shadow my-5">
             <Card.Body>
-              <Card.Title className="mb-4 text-center">
+              <Card.Title className="mb-4 text-center fw-bold">
                 APMC पत्ता
               </Card.Title>
 

@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-import signupImg from "../Images/UI/Screenshot 2026-03-06 104100.png"; // add your image
+import signupImg from "../Images/UI/sign up.png"; // add your image
 import '../CSS/Nondani.css'
 
 
@@ -55,7 +55,7 @@ export const Nondani = ({ addUser }) => {
                             <Card className="shadow p-4 my-5">
                                 <Card.Body>
 
-                                    <h3 className="text-center mb-4">नोंदणी करा</h3>
+                                    <h3 className="text-center mb-4 fw-bold">नोंदणी करा</h3>
 
                                     <Form onSubmit={handleSubmit}>
 

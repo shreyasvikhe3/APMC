@@ -21,8 +21,8 @@ export const Home = () => {
             <Link to="/Login" className="btn btn-dark btn-lg" style={{ backgroundColor: "#626a20", borderColor: "#626a20" }}>
               लॉगिन करा
             </Link>
-            <Link to="/Sampark" className="btn btn-light btn-lg" style={{ backgroundColor: "#030303",color:"white" }}>
-              साइन इन करा
+            <Link to="/Nondani" className="btn btn-light btn-lg" style={{ backgroundColor: "#030303",color:"white" }}>
+              साइन इन करा-
             </Link>
           </div>
         </div>

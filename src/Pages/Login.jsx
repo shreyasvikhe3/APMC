@@ -128,65 +128,70 @@ export const Login = ({ users }) => {
     //   </Card>
     // </Container>
     <div className="main-bg">
-    <Container className="">
-      <Row className="justify-content-center align-items-center">
+      <Container className="">
+        <Row className="justify-content-center align-items-center">
 
-        {/* Image Section */}
-        <Col md={6} className="mb-4 my-5">
-          <img
-            src={loginImg}
-            alt="Login"
-            className="img-fluid rounded shadow"
-          />
-        </Col>
+          {/* Image Section */}
+          <Col md={6} className="mb-4 my-5">
+            <img
+              src={loginImg}
+              alt="Login"
+              className="img-fluid rounded shadow"
+            />
+          </Col>
 
-        {/* Login Form */}
-        <Col md={6}>
-          <Card className="shadow p-4 my-4">
-            <Card.Body>
+          {/* Login Form */}
+          <Col md={6}>
+            <Card className="shadow p-4 my-4">
+              <Card.Body>
 
-              <h3 className="text-center mb-4">साइन इन</h3>
+                <h3 className="text-center mb-4 fw-bold">साइन इन</h3>
 
-              <Form>
+                <Form onSubmit={handleLogin}>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>ईमेल</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="आपला ईमेल टाका"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>ईमेल</Form.Label>
+                    <Form.Control
+                      type="email"
+                      placeholder="आपला ईमेल टाका"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </Form.Group>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>पासवर्ड</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="पासवर्ड टाका"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>पासवर्ड</Form.Label>
+                    <Form.Control
+                      type="password"
+                      placeholder="पासवर्ड टाका"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                  </Form.Group>
 
-                <Button variant="success" className="w-100">
-                  लॉगिन
-                </Button>
+                  <Button variant="success" type="submit" className="w-100">
+                    लॉगिन
+                  </Button>
 
-                <div className="text-center mt-3">
-                  <a href="#">पासवर्ड विसरलात?</a>
-                </div>
+                  <div className="text-center mt-3">
+                    <Button
+                      variant="link"
+                      onClick={() => navigate("/ForgotPassword")}
+                    >
+                      पासवर्ड विसरलात?
+                    </Button>
+                  </div>
 
-              </Form>
+                </Form>
 
-            </Card.Body>
-          </Card>
-        </Col>
+              </Card.Body>
+            </Card>
+          </Col>
 
-      </Row>
-    </Container>
+        </Row>
+      </Container>
     </div>
   );
 };

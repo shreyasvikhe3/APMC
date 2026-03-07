@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 /* Routes */
-const UserRoute = require("./Route/UserRoute");
+const UserRoute = require("../Route/UserRoute");
 app.use("/UserRoute", UserRoute);
 
 /* Server */
@@ -28,3 +28,11 @@ const PORT = process.env.PORT;
 const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+import authRoutes from "../Routes/Authroutes.js";
+
+app.use("/api",authRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
+
+app.listen(5000, () => {
+  console.log("Server running on port 5000");});

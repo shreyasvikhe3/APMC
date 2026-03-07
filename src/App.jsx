@@ -17,8 +17,9 @@ import { KrushiPanan } from './Pages/KrushiPanan';
 import { Samudra } from './Pages/Samudra';
 import { Mhbs } from './Pages/Mhbs';
 import { Nondani } from './Pages/Nondani';
-import {Sampark} from './Pages/Sampark';
+import { Sampark } from './Pages/Sampark';
 import { Gallary } from './Pages/Gallary';
+import { ForgotPassword } from './Pages/ForgotPassword';
 import { Login } from './Pages/Login';
 import { Sign } from './Pages/Sign';
 import { Nandgaon } from './Pages/Nandgaon';
@@ -39,11 +40,11 @@ function App() {
   };
   return (
     <>
-        
-          
-     
-    
-    
+
+
+
+
+
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -64,31 +65,32 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-  <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Sanstha" element={<Sanstha />} />
-      <Route path="/SabhapatiKaryakal" element={<SabhapatiKaryakal />} />
-      <Route path="/UpsabhapatiKaryakal" element={<UpsabhapatiKaryakal />} />
-      <Route path="/SanchalakMandal" element={<SanchalakMandal />} />
-      <Route path="/Karmachari" element={<Karmachari />} />
-      <Route path="/RashtriyKrushi" element={<RashtriyKrushi />} />
-      <Route path="/ShetmalTaran" element={<ShetmalTaran />} />
-      <Route path="/KrushiPanan" element={<KrushiPanan />} />
-      <Route path="/Samudra" element={<Samudra />} />
-      <Route path="/Mhbs" element={<Mhbs />} />
-      <Route path="/Nondani" element={<Nondani addUser={addUser} />} />
-      <Route path="/Sampark" element={<Sampark />} />
-      <Route path="/Gallary" element={<Gallary users={users} deleteUser={deleteUser} />} />
-      <Route path="/Login" element={<Login users={users} />} />
-      <Route path="/Sign" element={<Sign />} />
-      <Route path="/Nandgaon" element={<Nandgaon />} />
-      <Route path="/Bolthana" element={<Bolthana />} />
-      <Route path="/Downloads" element={<Downloads />} />
-    </Routes>
-    <Footer/>
-  </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Sanstha" element={<Sanstha />} />
+          <Route path="/SabhapatiKaryakal" element={<SabhapatiKaryakal />} />
+          <Route path="/UpsabhapatiKaryakal" element={<UpsabhapatiKaryakal />} />
+          <Route path="/SanchalakMandal" element={<SanchalakMandal />} />
+          <Route path="/Karmachari" element={<Karmachari />} />
+          <Route path="/RashtriyKrushi" element={<RashtriyKrushi />} />
+          <Route path="/ShetmalTaran" element={<ShetmalTaran />} />
+          <Route path="/KrushiPanan" element={<KrushiPanan />} />
+          <Route path="/Samudra" element={<Samudra />} />
+          <Route path="/Mhbs" element={<Mhbs />} />
+          <Route path="/Nondani" element={<Nondani addUser={addUser} />} />
+          <Route path="/Sampark" element={<Sampark />} />
+          <Route path="/Gallary" element={<Gallary users={users} deleteUser={deleteUser} />} />
+          <Route path="/ForgotPassword" element={<ForgotPassword users={users} setUsers={setUsers} />}/>
+          <Route path="/Login" element={<Login users={users} />} />
+          <Route path="/Sign" element={<Sign />} />
+          <Route path="/Nandgaon" element={<Nandgaon />} />
+          <Route path="/Bolthana" element={<Bolthana />} />
+          <Route path="/Downloads" element={<Downloads />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

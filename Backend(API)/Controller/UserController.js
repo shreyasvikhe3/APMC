@@ -1,21 +1,21 @@
-const User = require("../Model/User");
-const user = require("../Model/User");
-//model means schema i.e above user
-//POST API
+// const User = require("../Model/User");
+// const user = require("../Model/User");
+// //model means schema i.e above user
+// //POST API
 
-const addUser = async (req, res) => {
-    const { email, password } = req.body;
-    try {
-        const data = new user({
-            email, password
-        })
-        await data.save();
-        res.status(200).send({ message: "User added successfully" });
-    }
-    catch (err) {
-        res.status(500).send({ message: "Failed to add user", err: err.message });
-    }
-}
+// const addUser = async (req, res) => {
+//     const { email, password } = req.body;
+//     try {
+//         const data = new user({
+//             email, password
+//         })
+//         await data.save();
+//         res.status(200).send({ message: "User added successfully" });
+//     }
+//     catch (err) {
+//         res.status(500).send({ message: "Failed to add user", err: err.message });
+//     }
+// }
 //GET API
 
 // const getAllUsers = async (req, res) => {
@@ -62,4 +62,14 @@ const addUser = async (req, res) => {
 //     }
 // }
 
- module.exports = { addUser };
+import express from "express";
+import { addUser, getAllUsers, DeleteUsers, UpdateUsers } from "../Controllers/UserController.js";
+
+const router = express.Router();
+
+router.post("/user", addUser);
+router.get("/findData", getAllUsers);
+router.delete("/deleteUser/:id", DeleteUsers);
+router.put("/updateUser/:id", UpdateUsers);
+
+export default router;
